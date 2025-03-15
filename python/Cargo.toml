@@ -1,0 +1,25 @@
+[package]
+name = "oze-canopen-python"
+description = "OZON CANOpen library Python bindings"
+version = "0.0.0"
+edition = "2021"
+authors = ["OZON TECH", "Aleksandr Lutsai <s.lyra@ya.ru>"]
+license = "Apache-2.0"
+exclude = ["docker/"]
+documentation = "https://docs.rs/oze-canopen"
+homepage = "https://github.com/ozontech/oze-canopen-rs"
+repository = "https://github.com/ozontech/oze-canopen-rs"
+readme = "readme.md"
+
+[lib]
+name = "oze_canopen"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = "0.24"
+pyo3-async-runtimes = { version = "0.24", features = [
+    "attributes",
+    "tokio-runtime",
+] }
+tokio = "1.40"
+oze-canopen = { path = "../" }

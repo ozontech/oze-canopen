@@ -1,0 +1,26 @@
+[package]
+name = "oze-canopen"
+description = "OZON CANOpen library"
+version = "0.0.0"
+edition = "2021"
+authors = ["OZON TECH", "Aleksandr Lutsai <s.lyra@ya.ru>"]
+license = "Apache-2.0"
+exclude = ["docker/", ".*", "python/"]
+documentation = "https://docs.rs/oze-canopen"
+homepage = "https://github.com/ozontech/oze-canopen-rs"
+repository = "https://github.com/ozontech/oze-canopen-rs"
+readme = "readme.md"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+socketcan = { version = "3.3", features = ["tokio", "netlink"] }
+thiserror = "1.0"
+futures-util = "0.3"
+bitflags = { version = "2.5", features = ["serde"] }
+bincode = { version = "2.0.1", features = ["derive", "serde"] }
+serde = { version = "1.0", features = ["derive"] }
+binrw = "0.14.1"
+
+[dev-dependencies]
+tokio-macros = "2.3"
+thiserror-impl = "1.0"
