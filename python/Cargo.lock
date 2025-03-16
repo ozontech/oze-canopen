@@ -403,7 +403,7 @@ dependencies = [
 
 [[package]]
 name = "oze-canopen-python"
-version = "0.0.0"
+version = "0.1.0"
 dependencies = [
  "oze-canopen",
  "pyo3",
