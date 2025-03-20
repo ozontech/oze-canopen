@@ -10,6 +10,7 @@ documentation = "https://docs.rs/oze-canopen"
 homepage = "https://github.com/ozontech/oze-canopen"
 repository = "https://github.com/ozontech/oze-canopen"
 readme = "readme.md"
+rust-version = "1.85.0"
 
 [dependencies]
 tokio = { version = "1", features = ["full"] }

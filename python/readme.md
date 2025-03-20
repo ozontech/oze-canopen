@@ -20,6 +20,8 @@ async def f():
     a = await oze_canopen.OzeCO.start("vcan0", 100000)
     res = await a.sdo_upload(4, 0x1800, 0)
     print(res)
+    print(res.cob)
+    print(res.data)
     await a.sdo_download(4, 0x2110, 1, b"\xff\x12\x13\x11")
     res = await a.sdo_upload(4, 0x2110, 1)
     print(res)
